@@ -23,6 +23,8 @@
 		34135E4C2A03D0C7006F68A1 /* CatGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34135E4B2A03D0C7006F68A1 /* CatGridCell.xib */; };
 		34135E4E2A03DC4B006F68A1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E4D2A03DC4B006F68A1 /* Logger.swift */; };
 		34135E502A03DE41006F68A1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E4F2A03DE41006F68A1 /* DetailViewController.swift */; };
+		34135E522A03DED5006F68A1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34135E512A03DED5006F68A1 /* DetailViewController.xib */; };
+		34135E542A03DF33006F68A1 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E532A03DF33006F68A1 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		34135E4B2A03D0C7006F68A1 /* CatGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatGridCell.xib; sourceTree = "<group>"; };
 		34135E4D2A03DC4B006F68A1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		34135E4F2A03DE41006F68A1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		34135E512A03DED5006F68A1 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		34135E532A03DF33006F68A1 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				34135E4F2A03DE41006F68A1 /* DetailViewController.swift */,
+				34135E512A03DED5006F68A1 /* DetailViewController.xib */,
+				34135E532A03DF33006F68A1 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 			files = (
 				34135E292A03BCB9006F68A1 /* Assets.xcassets in Resources */,
 				34135E2A2A03BCB9006F68A1 /* LaunchScreen.storyboard in Resources */,
+				34135E522A03DED5006F68A1 /* DetailViewController.xib in Resources */,
 				34135E322A03BF93006F68A1 /* GridViewController.xib in Resources */,
 				34135E4C2A03D0C7006F68A1 /* CatGridCell.xib in Resources */,
 			);
@@ -221,6 +228,7 @@
 				34135E462A03CBE7006F68A1 /* GridViewModel.swift in Sources */,
 				34135E442A03CB45006F68A1 /* FlowCoordinator.swift in Sources */,
 				34135E4E2A03DC4B006F68A1 /* Logger.swift in Sources */,
+				34135E542A03DF33006F68A1 /* DetailViewModel.swift in Sources */,
 				34135E3D2A03C32C006F68A1 /* SimpleDI.swift in Sources */,
 				34135E272A03BCB9006F68A1 /* AppDelegate.swift in Sources */,
 				34135E3F2A03C38A006F68A1 /* ErrorMessage.swift in Sources */,

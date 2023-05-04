@@ -18,6 +18,11 @@ protocol FlowCoordinator {
 }
 
 private class FlowCoordinatorImpl {
+    struct Dependencies {
+        let logger = DI.getLogger()
+    }
+
+    private let deps = Dependencies()
     static let shared = FlowCoordinatorImpl()
 
     var navigationController: UINavigationController?
@@ -41,8 +46,15 @@ extension FlowCoordinatorImpl: FlowCoordinator {
     }
 
     func showDetailController(for item: LocalItem) {
-        print("Show detail for \(item)")
+        deps.logger.debug("Show detail for \(item)")
+
+        let flow = DetailFlow(
+            close: { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+            }
+        )
+        let viewModel = DetailViewModelImpl(item: item, flow: flow)
+        let controller = DetailViewController(viewModel: viewModel)
+        navigationController?.pushViewController(controller, animated: true)
     }
-
-
 }

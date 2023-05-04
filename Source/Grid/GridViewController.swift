@@ -43,16 +43,8 @@ class GridViewController: UIViewController {
 
         setupCollectionView()
         setupDataSource()
-    }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        reloadData()
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        cancellables = []
+        loadData()
     }
 
     private func setupCollectionView() {
