@@ -10,6 +10,7 @@ import Foundation
 struct ErrorMessage: Error, CustomStringConvertible {
     let code: ErrorCode
     let message: String
+    let underlyingError: Error?
 
     var description: String {
         return "\(message) (\(code.rawValue))"
@@ -17,5 +18,8 @@ struct ErrorMessage: Error, CustomStringConvertible {
 }
 
 enum ErrorCode: String {
-    case cantLoadLocalData = "CL00001"
+    case wrongHTTPCode = "CL0001"
+    case invalidNetworkResponse = "CL0002"
+    case cantDecodeData = "CL0003"
+    case invalidImageURL = "CL0004"
 }

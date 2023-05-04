@@ -12,5 +12,5 @@ import UIKit
 class CatGridCell: UICollectionViewCell {
     @IBOutlet var image: LazyImageView!
     @IBOutlet var title: UILabel!
-    var item: LocalItem?
+    var item: DataItem?
 }

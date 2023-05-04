@@ -13,22 +13,22 @@ struct DetailFlow {
 }
 
 protocol DetailViewModel {
-    func loadData() -> AnyPublisher<LocalItem, Never>
+    func loadData() -> AnyPublisher<DataItem, Never>
     func close()
 }
 
 class DetailViewModelImpl {
-    let item: LocalItem
+    let item: DataItem
     let flow: DetailFlow
 
-    init(item: LocalItem, flow: DetailFlow) {
+    init(item: DataItem, flow: DetailFlow) {
         self.item = item
         self.flow = flow
     }
 }
 
 extension DetailViewModelImpl: DetailViewModel {
-    func loadData() -> AnyPublisher<LocalItem, Never> {
+    func loadData() -> AnyPublisher<DataItem, Never> {
         return Just(item).eraseToAnyPublisher()
 
     }

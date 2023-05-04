@@ -9,17 +9,17 @@ import Combine
 import Foundation
 
 struct GridFlow {
-    let didSelectItem: (LocalItem) -> Void
+    let didSelectItem: (DataItem) -> Void
 }
 
 protocol GridViewModel {
-    func loadData() -> AnyPublisher<[LocalItem], ErrorMessage>
-    func didSelect(item: LocalItem)
+    func loadData() -> AnyPublisher<DataItem, ErrorMessage>
+    func didSelect(item: DataItem)
 }
 
 class GridViewModelImpl {
     private struct Depedencies {
-        let localStorage = DI.getLocalStorage()
+        let itemsLoader = DI.getItemsLoader()
     }
     private let deps = Depedencies()
     let flow: GridFlow
@@ -30,11 +30,11 @@ class GridViewModelImpl {
 }
 
 extension GridViewModelImpl: GridViewModel {
-    func loadData() -> AnyPublisher<[LocalItem], ErrorMessage> {
-        return deps.localStorage.loadData()
+    func loadData() -> AnyPublisher<DataItem, ErrorMessage> {
+        return deps.itemsLoader.loadData()
     }
 
-    func didSelect(item: LocalItem) {
+    func didSelect(item: DataItem) {
         flow.didSelectItem(item)
     }
 }

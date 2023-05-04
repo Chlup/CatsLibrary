@@ -20,9 +20,9 @@ class GridViewController: UIViewController {
 
     private let deps = Dependencies()
     private let viewModel: GridViewModel
-    private var dataSource: UICollectionViewDiffableDataSource<Section, LocalItem>?
+    private var dataSource: UICollectionViewDiffableDataSource<Section, DataItem>?
     private var cancellables: [AnyCancellable] = []
-    private var items: [LocalItem] = []
+    private var items: [DataItem] = []
 
     @IBOutlet var grid: UICollectionView!
 
@@ -64,7 +64,7 @@ class GridViewController: UIViewController {
     }
 
     private func setupDataSource() {
-        let dataSource = UICollectionViewDiffableDataSource<Section, LocalItem>(collectionView: grid) { collectionView, indexPath, item in
+        let dataSource = UICollectionViewDiffableDataSource<Section, DataItem>(collectionView: grid) { collectionView, indexPath, item in
             let finalCell: UICollectionViewCell
             switch item {
             case let .cat(cat):
@@ -91,9 +91,9 @@ class GridViewController: UIViewController {
         grid.dataSource = dataSource
     }
 
-    private func update(items: [LocalItem]) {
-        self.items = items
-        var snapshot = NSDiffableDataSourceSnapshot<Section, LocalItem>()
+    private func update(with item: DataItem) {
+        self.items.append(item)
+        var snapshot = NSDiffableDataSourceSnapshot<Section, DataItem>()
         snapshot.appendSections([.main])
         snapshot.appendItems(items)
         dataSource?.apply(snapshot, animatingDifferences: true)
@@ -106,6 +106,7 @@ class GridViewController: UIViewController {
     }
 
     private func loadData() {
+        items = []
         viewModel.loadData()
             .receive(on: DispatchQueue.main)
             .sink(
@@ -119,8 +120,8 @@ class GridViewController: UIViewController {
                         self?.handleLoading(error: error)
                     }
                 },
-                receiveValue: { [weak self] items in
-                    self?.update(items: items)
+                receiveValue: { [weak self] item in
+                    self?.update(with: item)
                 }
             )
             .store(in: &cancellables)
@@ -128,8 +129,10 @@ class GridViewController: UIViewController {
 
     private func handleLoading(error: ErrorMessage) {
         let alert = UIAlertController(title: "Data loading error", message: error.description, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Reload", style: .default) { [weak self] _ in self?.reloadData() }
-        alert.addAction(action)
+        let reloadAction = UIAlertAction(title: "Reload", style: .default) { [weak self] _ in self?.reloadData() }
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(reloadAction)
+        alert.addAction(okAction)
 
         present(alert, animated: true)
     }

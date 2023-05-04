@@ -54,7 +54,7 @@ class DetailViewController: UIViewController {
             .store(in: &cancellables)
     }
 
-    private func updateUI(with item: LocalItem) {
+    private func updateUI(with item: DataItem) {
         switch item {
         case let .cat(cat):
             name.text = cat.name

@@ -12,7 +12,7 @@
 		34135E2A2A03BCB9006F68A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34135E212A03BCB9006F68A1 /* LaunchScreen.storyboard */; };
 		34135E302A03BF86006F68A1 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E2F2A03BF86006F68A1 /* GridViewController.swift */; };
 		34135E322A03BF93006F68A1 /* GridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34135E312A03BF93006F68A1 /* GridViewController.xib */; };
-		34135E372A03C27A006F68A1 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E362A03C27A006F68A1 /* LocalStorage.swift */; };
+		34135E372A03C27A006F68A1 /* ItemsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E362A03C27A006F68A1 /* ItemsLoader.swift */; };
 		34135E3B2A03C28D006F68A1 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E3A2A03C28D006F68A1 /* Cat.swift */; };
 		34135E3D2A03C32C006F68A1 /* SimpleDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E3C2A03C32C006F68A1 /* SimpleDI.swift */; };
 		34135E3F2A03C38A006F68A1 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E3E2A03C38A006F68A1 /* ErrorMessage.swift */; };
@@ -35,7 +35,7 @@
 		34135E252A03BCB9006F68A1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34135E2F2A03BF86006F68A1 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		34135E312A03BF93006F68A1 /* GridViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridViewController.xib; sourceTree = "<group>"; };
-		34135E362A03C27A006F68A1 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		34135E362A03C27A006F68A1 /* ItemsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsLoader.swift; sourceTree = "<group>"; };
 		34135E3A2A03C28D006F68A1 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		34135E3C2A03C32C006F68A1 /* SimpleDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDI.swift; sourceTree = "<group>"; };
 		34135E3E2A03C38A006F68A1 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				34135E3A2A03C28D006F68A1 /* Cat.swift */,
-				34135E362A03C27A006F68A1 /* LocalStorage.swift */,
+				34135E362A03C27A006F68A1 /* ItemsLoader.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34135E502A03DE41006F68A1 /* DetailViewController.swift in Sources */,
-				34135E372A03C27A006F68A1 /* LocalStorage.swift in Sources */,
+				34135E372A03C27A006F68A1 /* ItemsLoader.swift in Sources */,
 				34135E302A03BF86006F68A1 /* GridViewController.swift in Sources */,
 				34135E3B2A03C28D006F68A1 /* Cat.swift in Sources */,
 				34135E462A03CBE7006F68A1 /* GridViewModel.swift in Sources */,

@@ -14,7 +14,7 @@ extension DI {
 
 protocol FlowCoordinator {
     func makeRootController() -> UIViewController
-    func showDetailController(for item: LocalItem)
+    func showDetailController(for item: DataItem)
 }
 
 private class FlowCoordinatorImpl {
@@ -45,7 +45,7 @@ extension FlowCoordinatorImpl: FlowCoordinator {
         return navigationController
     }
 
-    func showDetailController(for item: LocalItem) {
+    func showDetailController(for item: DataItem) {
         deps.logger.debug("Show detail for \(item)")
 
         let flow = DetailFlow(
