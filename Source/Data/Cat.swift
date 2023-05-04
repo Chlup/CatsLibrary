@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Cat {
+struct Cat: Hashable, Sendable {
     let id: String
     let name: String
     let imageURL: URL

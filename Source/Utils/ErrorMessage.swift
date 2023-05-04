@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct ErrorMessage: Error {
+struct ErrorMessage: Error, CustomStringConvertible {
     let code: ErrorCode
     let message: String
+
+    var description: String {
+        return "\(message) (\(code.rawValue))"
+    }
 }
 
 enum ErrorCode: String {

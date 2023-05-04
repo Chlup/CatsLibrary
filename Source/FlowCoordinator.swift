@@ -14,7 +14,7 @@ extension DI {
 
 protocol FlowCoordinator {
     func makeRootController() -> UIViewController
-    func showDetailController(for cat: Cat)
+    func showDetailController(for item: LocalItem)
 }
 
 private class FlowCoordinatorImpl {
@@ -28,8 +28,8 @@ private class FlowCoordinatorImpl {
 extension FlowCoordinatorImpl: FlowCoordinator {
     func makeRootController() -> UIViewController {
         let flow = GridFlow(
-            didSelectCat: { [weak self] cat in
-                self?.showDetailController(for: cat)
+            didSelectItem: { [weak self] item in
+                self?.showDetailController(for: item)
             }
         )
         let viewModel = GridViewModelImpl(flow: flow)
@@ -40,8 +40,8 @@ extension FlowCoordinatorImpl: FlowCoordinator {
         return navigationController
     }
 
-    func showDetailController(for cat: Cat) {
-        print("Show detail for \(cat)")
+    func showDetailController(for item: LocalItem) {
+        print("Show detail for \(item)")
     }
 
 
