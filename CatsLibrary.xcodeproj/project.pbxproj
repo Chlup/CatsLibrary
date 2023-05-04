@@ -7,21 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34135E262A03BCB9006F68A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E1C2A03BCB8006F68A1 /* ViewController.swift */; };
 		34135E272A03BCB9006F68A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E1D2A03BCB8006F68A1 /* AppDelegate.swift */; };
-		34135E282A03BCB9006F68A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E1E2A03BCB8006F68A1 /* SceneDelegate.swift */; };
 		34135E292A03BCB9006F68A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34135E202A03BCB9006F68A1 /* Assets.xcassets */; };
 		34135E2A2A03BCB9006F68A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34135E212A03BCB9006F68A1 /* LaunchScreen.storyboard */; };
+		34135E302A03BF86006F68A1 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E2F2A03BF86006F68A1 /* GridViewController.swift */; };
+		34135E322A03BF93006F68A1 /* GridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34135E312A03BF93006F68A1 /* GridViewController.xib */; };
+		34135E372A03C27A006F68A1 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E362A03C27A006F68A1 /* LocalStorage.swift */; };
+		34135E3B2A03C28D006F68A1 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E3A2A03C28D006F68A1 /* Cat.swift */; };
+		34135E3D2A03C32C006F68A1 /* SimpleDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E3C2A03C32C006F68A1 /* SimpleDI.swift */; };
+		34135E3F2A03C38A006F68A1 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E3E2A03C38A006F68A1 /* ErrorMessage.swift */; };
+		34135E422A03C9C9006F68A1 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 34135E412A03C9C9006F68A1 /* NukeUI */; };
+		34135E442A03CB45006F68A1 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E432A03CB45006F68A1 /* FlowCoordinator.swift */; };
+		34135E462A03CBE7006F68A1 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34135E452A03CBE7006F68A1 /* GridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		34135E042A03BC5E006F68A1 /* CatsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		34135E1C2A03BCB8006F68A1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		34135E1D2A03BCB8006F68A1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34135E1E2A03BCB8006F68A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		34135E202A03BCB9006F68A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34135E222A03BCB9006F68A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34135E252A03BCB9006F68A1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34135E2F2A03BF86006F68A1 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		34135E312A03BF93006F68A1 /* GridViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridViewController.xib; sourceTree = "<group>"; };
+		34135E362A03C27A006F68A1 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		34135E3A2A03C28D006F68A1 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		34135E3C2A03C32C006F68A1 /* SimpleDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDI.swift; sourceTree = "<group>"; };
+		34135E3E2A03C38A006F68A1 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		34135E432A03CB45006F68A1 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		34135E452A03CBE7006F68A1 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34135E422A03C9C9006F68A1 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,9 +69,12 @@
 		34135E1B2A03BCB8006F68A1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				34135E1C2A03BCB8006F68A1 /* ViewController.swift */,
 				34135E1D2A03BCB8006F68A1 /* AppDelegate.swift */,
-				34135E1E2A03BCB8006F68A1 /* SceneDelegate.swift */,
+				34135E432A03CB45006F68A1 /* FlowCoordinator.swift */,
+				34135E352A03C268006F68A1 /* Data */,
+				34135E2D2A03BF7D006F68A1 /* Detail */,
+				34135E2E2A03BF7D006F68A1 /* Grid */,
+				34135E342A03C236006F68A1 /* Utils */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -70,6 +87,41 @@
 				34135E252A03BCB9006F68A1 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		34135E2D2A03BF7D006F68A1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		34135E2E2A03BF7D006F68A1 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				34135E2F2A03BF86006F68A1 /* GridViewController.swift */,
+				34135E312A03BF93006F68A1 /* GridViewController.xib */,
+				34135E452A03CBE7006F68A1 /* GridViewModel.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		34135E342A03C236006F68A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				34135E3C2A03C32C006F68A1 /* SimpleDI.swift */,
+				34135E3E2A03C38A006F68A1 /* ErrorMessage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		34135E352A03C268006F68A1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				34135E3A2A03C28D006F68A1 /* Cat.swift */,
+				34135E362A03C27A006F68A1 /* LocalStorage.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +140,9 @@
 			dependencies = (
 			);
 			name = CatsLibrary;
+			packageProductDependencies = (
+				34135E412A03C9C9006F68A1 /* NukeUI */,
+			);
 			productName = CatsLibrary;
 			productReference = 34135E042A03BC5E006F68A1 /* CatsLibrary.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +171,9 @@
 				Base,
 			);
 			mainGroup = 34135DFB2A03BC5E006F68A1;
+			packageReferences = (
+				34135E402A03C9C9006F68A1 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 34135E052A03BC5E006F68A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +190,7 @@
 			files = (
 				34135E292A03BCB9006F68A1 /* Assets.xcassets in Resources */,
 				34135E2A2A03BCB9006F68A1 /* LaunchScreen.storyboard in Resources */,
+				34135E322A03BF93006F68A1 /* GridViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34135E372A03C27A006F68A1 /* LocalStorage.swift in Sources */,
+				34135E302A03BF86006F68A1 /* GridViewController.swift in Sources */,
+				34135E3B2A03C28D006F68A1 /* Cat.swift in Sources */,
+				34135E462A03CBE7006F68A1 /* GridViewModel.swift in Sources */,
+				34135E442A03CB45006F68A1 /* FlowCoordinator.swift in Sources */,
+				34135E3D2A03C32C006F68A1 /* SimpleDI.swift in Sources */,
 				34135E272A03BCB9006F68A1 /* AppDelegate.swift in Sources */,
-				34135E262A03BCB9006F68A1 /* ViewController.swift in Sources */,
-				34135E282A03BCB9006F68A1 /* SceneDelegate.swift in Sources */,
+				34135E3F2A03C38A006F68A1 /* ErrorMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +351,6 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,7 +380,6 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		34135E402A03C9C9006F68A1 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		34135E412A03C9C9006F68A1 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34135E402A03C9C9006F68A1 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34135DFC2A03BC5E006F68A1 /* Project object */;
 }
