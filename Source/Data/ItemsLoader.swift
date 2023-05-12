@@ -72,22 +72,24 @@ extension ItemsLoaderImpl: ItemsLoader {
             let publishers: [AnyPublisher<DataItem, ErrorMessage>] = urls
                 .map { url in
                     return self.downloadCatInfo(url)
-                        .flatMap { catInfo -> AnyPublisher<DataItem, ErrorMessage> in
+                        .tryMap { catInfo in
                             guard let imageURL = URL(string: "https://cataas.com\(catInfo.url)") else {
-                                return Fail(
-                                    error: ErrorMessage(
+                                throw ErrorMessage(
                                         code: .invalidImageURL,
                                         message: "Fetched image URL is invalid \(catInfo.url)",
                                         underlyingError: nil
                                     )
-                                )
-                                .eraseToAnyPublisher()
                             }
 
                             let name = Constants.names[Int.random(in: 0..<Constants.names.count)]
-                            return Just(.cat(Cat(id: UUID().uuidString, name: name, imageURL: imageURL)))
-                                .setFailureType(to: ErrorMessage.self)
-                                .eraseToAnyPublisher()
+                            return DataItem.cat(Cat(id: UUID().uuidString, name: name, imageURL: imageURL))
+                        }
+                        .mapError { error in
+                            if let error = error as? ErrorMessage {
+                                return error
+                            } else {
+                                return ErrorMessage(code: .invalidImageURL, message: "Invalid cat image URL.", underlyingError: error)
+                            }
                         }
                         .eraseToAnyPublisher()
                 }
