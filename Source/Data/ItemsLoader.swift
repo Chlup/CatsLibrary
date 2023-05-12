@@ -27,7 +27,7 @@ private class ItemsLoaderImpl {
         static let names: [String] = [
             "Luna", "Charlie", "Bella", "Simba", "Milo", "Ciri", "Tris", "Daisy", "Max", "Loki", "Leo", "Oliver", "Lucy", "Tiger", "Nala"
         ]
-        static let numbersOfCatsToLoad = 20
+        static let numbersOfCatsToLoad = 10
     }
 
     private struct CatInfo: Codable {
